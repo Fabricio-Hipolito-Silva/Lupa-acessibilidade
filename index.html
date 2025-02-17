@@ -1,0 +1,36 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupa</title>
+</head>
+<body>
+    <div id="texto">
+    <h1 id="titulo"> Títuloaaaaa </h1>
+    <p id="paragrafo"> Texto que tem que aumentar aaaaaaaaaaaaaaa</p>
+    </div>
+
+    <button id="lupaativar"> Ativar Lupa </button>
+    <button id="lupadesativar"> Desativar Lupa </button>
+
+    <script>
+        let ativar = false
+        document.getElementById("lupaativar").addEventListener("click",function () {
+            ativar = true;
+        }) 
+        document.getElementById("lupadesativar").addEventListener("click",function () {
+            ativar = false;
+        }) 
+        document.getElementById("paragrafo").addEventListener("mouseover", function () {
+            if (ativar == true) {
+                document.getElementById("paragrafo").style.fontSize = "30px";         
+            }
+        })
+        document.getElementById("paragrafo").addEventListener("mouseleave", function () {
+            if (ativar == true) {
+                document.getElementById("paragrafo").style.fontSize = "16px";         
+            }
+        })
+    </script>
+</body>
+</html>
